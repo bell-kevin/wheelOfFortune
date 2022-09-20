@@ -17,15 +17,15 @@ public class Game {
         for (int i = 0; i < wordLength; i++) {
             game[0][i] = word.charAt(i);
             game[1][i] = '=';
-        } //end for
+        } //end for loop
     } // end Game constructor
 
     public void display() {
         for (int i = 0; i < wordLength; i++) {
             System.out.printf("  %s", game[1][i]);
-        } //end for
+        } //end for loop
         System.out.println("");
-    } //end display
+    } //end display method
 
     public void findLetter(char guess) {
         int count = 0;
@@ -33,22 +33,22 @@ public class Game {
             if (guess == game[0][i]) {
                 game[1][i] = guess;
                 count++;
-            } //end if
-        } //end for
+            } //end if condition
+        } //end for loop
         if (count > 0) {
             System.out.printf("Fount it %d times\n", count);
         } else {
             System.out.println("Letter was not found");
-        } //end if
+        } //end if/else condition
         display();
-    } //end findLetter
+    } //end findLetter method
 
     public boolean isGameOver() {
         for (int i = 0; i < wordLength; i++) {
             if (game[0][i] != game[1][i]) {
                 return false;
-            }
-        } //end for
+            } // end if condition
+        } //end for loop
         return true;
     } //end isGameOver  
 } //end class Game
