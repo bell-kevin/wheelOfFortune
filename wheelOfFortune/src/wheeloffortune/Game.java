@@ -6,7 +6,7 @@
  **************************************************************************** */
 package wheeloffortune;
 
-public class Game {
+class Game {
 
     private char[][] game; // multi-dimensional array
     private String word = "generator";
