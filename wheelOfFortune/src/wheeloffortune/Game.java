@@ -8,7 +8,7 @@ package wheeloffortune;
 
 public class Game {
 
-    private char[][] game;
+    private char[][] game; // multi-dimensional array
     private String word = "generator";
     private int wordLength = word.length();
 
